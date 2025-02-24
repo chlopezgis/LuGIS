@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Metadatos -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Estilos para el proyecto -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/sectionHome.css">
+    <link rel="stylesheet" href="css/sectionAbout.css">
+    <link rel="stylesheet" href="css/sectionProjects.css">
+    <link rel="stylesheet" href="css/sectionContact.css">
+    <link rel="stylesheet" href="css/sectionSkills.css">
+    <link rel="stylesheet" href="css/sectionEducation.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+          crossorigin=""/>
+
+    <!-- Scripts -->
+    <script src="js/sectionProjects.js" defer></script>
+    <script src="js/menu.js"></script>
+    <script src="js/skills.js"></script>
+    <script src="js/scrollEffect.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin="">
+    </script>
+    <script src="js/map.js"></script>
+     <script src="js/form.js"></script>
+    <!-- Título -->
+    <title>LuGIS</title>
+</head>
+<body>
+    <!-- Cabecera con Logo y elementos de navegación -->
+    <header>
+        <nav>
+            <div id="logo">
+                <img src="img/logo.png" alt="LuGIS-logo">
+            </div>
+            <div id="menu">
+                <ul class="nav-links">
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#about">Sobre mí</a></li>
+                    <li><a href="#education">Formación</a></li>
+                    <li><a href="#skills">Habilidades</a></li> <!-- Corrige "home" duplicado -->
+                    <li><a href="#projects">Proyectos</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="menu-toggle">&#9776;</div> <!-- Ícono de menú -->
+        </nav>
+    </header>
+
+    <!-- Sección de Inicio -->
+    <section id="home">
+        <div class="home-container">
+            <div class="home-text">
+                <h1 class="title">Charlie Lopez Rengifo</h1>
+                <h2>✅ Geographic & Systems Engineer | GIS Developer | Spatial Database Administrator</h2>
+                <p class="home-text-1">
+                    Ingeniero Geógrafo y de Sistemas especializado en <b>GIS</b>, <b>programación geoespacial</b> y 
+                    gestión de <b>bases de datos espaciales</b>. Con experiencia en automatización de geoprocesos,
+                    implementación y administración de bases de datos, diseño de geoportales y liderazgo de 
+                    equipos. Enfocado en la optimización de flujos de trabajo para garantizar la eficiencia, 
+                    calidad y precisión de la información geoespacial.
+                </p>
+    
+                <!-- Contenedor de iconos y botón -->
+                <div class="social-container">
+                    <div class="social-links">
+                        <a href="https://github.com/chlopezgis/" target="_blank">
+                            <img src="img/icons/github.svg" alt="GitHub">
+                        </a>
+                        <a href="https://www.linkedin.com/in/chlopezgis/" target="_blank">
+                            <img src="img/icons/linkedin.svg" alt="LinkedIn">
+                        </a>
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=chlopezgis@gmail.com">
+                            <img src="img/icons/email.svg" alt="Email">
+                        </a>
+                    </div>
+    
+                    <a href="#contact" class="btn-contact">Contáctame</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Sección "Sobre mi"-->
+    <section id="about" class="hidden-section">
+        <h1 class="title">Sobre mi</h1>
+        <div class="about-container">
+            <div class="about-foto">
+                <img src="img/foto.jpeg" alt="foto">
+            </div>
+            <div class="about-text">
+                <p class="about-text-1">
+                    Soy Ingeniero Geógrafo y de Sistemas, especializado en Sistemas de Información Geográfica
+                    (GIS), desarrollo geoespacial y bases de datos espaciales. Mi enfoque profesional está en la 
+                    integración de tecnología y datos espaciales para generar soluciones innovadoras en el análisis, 
+                    automatización y visualización geoespacial.
+                    <br><br>
+                    Aspiro a seguir creciendo en el campo del Desarrollo GIS y la Ciencia de Datos, aplicando mis 
+                    conocimientos en PostGIS, Python, GDAL y Web Mapping para optimizar flujos de trabajo y mejorar 
+                    la toma de decisiones basada en datos espaciales.
+                    <br><br>
+                    Me considero una persona proactiva, analítica y orientada a la resolución de problemas, con 
+                    habilidades en trabajo en equipo, comunicación asertiva y pensamiento crítico. Disfruto 
+                    aprender nuevas tecnologías, compartir conocimientos y enfrentar desafíos que me permitan 
+                    mejorar mis habilidades técnicas y profesionales.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de formación -->
+    <section id="education" class="education-section">
+        <h1 class="title">Formación</h1>
+        <div class="education-container">
+            <!-- Tarjeta 1 - UNFV -->
+            <div class="education-card">
+                <img src="img/logos/unfv-logo.png" alt="UNFV Logo" class="education-logo">
+                <h3>Universidad Nacional Federico Villarreal</h3>
+                <p class="education-degree">Ingeniería Geográfica</p>
+                <p class="education-period">2007 - 2012</p>
+            </div>
+            <!-- Tarjeta 2 - UPN -->
+            <div class="education-card">
+                <img src="img/logos/upn-logo.png" alt="UPN Logo" class="education-logo">
+                <h3>Universidad Privada del Norte</h3>
+                <p class="education-degree">Ingeniería de Sistemas Computacionales (WA)</p>
+                <p class="education-period">2015 - 2017</p>
+            </div>
+            <!-- Tarjeta 3 - UPV -->
+            <div class="education-card">
+                <img src="img/logos/upv-logo.svg" alt="UPV Logo" class="education-logo">
+                <h3>Universidad Politécnica de Valencia</h3>
+                <p class="education-degree">Spatial Databases: PostGIS</p>
+                <p class="education-degree">Infraestructura de Datos Espaciales y Geoportales</p>
+                <p class="education-period">2022</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de habilidades -->
+    <section id="skills" class="hidden-section">
+        <h1 class="subtitle">Habilidades</h1>
+        <div class="skills-container">
+        </div>
+    </section>
+
+    <!-- Sección de proyectos -->
+    <section id="projects" class="hidden-section">
+        <h1 class="subtitle">Mis Proyectos</h1>
+        <!-- Botones de pestañas -->
+        <div class="tabs">
+            <button class="tab-button active" onclick="showCategory('qgis')">QGIS</button>
+            <button class="tab-button" onclick="showCategory('python')">Python</button>
+            <button class="tab-button" onclick="showCategory('postgis')">PostGIS</button>
+            <button class="tab-button" onclick="showCategory('GDAL')">GDAL</button>
+            <button class="tab-button" onclick="showCategory('webmapping')">WebMapping</button>
+        </div>
+        <!-- Contenedor de proyectos con Grid -->
+        <div class="projects-container">
+            <!-- Proyectos de QGIS -->
+            <div class="project qgis">
+                <h3>Funciones de arreglos</h3>
+                <p>
+                    Las funciones de arreglo en QGIS permiten crear y manipular listas
+                    ordenadas de datos, facilitando operaciones avanzadas en análisis 
+                    geoespacial. Estas herramientas son esenciales para gestionar y analizar 
+                    conjuntos de datos estructurados de manera eficiente en proyectos SIG</p>
+                <a href="projects/qgis/arreglos.html" target="_blank">Ver proyecto</a>
+            </div>
+            <div class="project qgis">
+                <h3>Funciones Agregadas</h3>
+                <p>Otro proyecto QGIS.</p>
+                <a href="#">Ver en GitHub</a>
+            </div>
+
+            <!-- Proyectos de Python -->
+            <div class="project python">
+                <h3>Proyecto Python 1</h3>
+                <p>Automatización con Python.</p>
+                <a href="#">Ver en GitHub</a>
+            </div>
+            <div class="project python">
+                <h3>Proyecto Python 2</h3>
+                <p>Otro análisis con Python.</p>
+                <a href="#">Ver en GitHub</a>
+            </div>
+    
+            <!-- Proyectos de PostGIS -->
+            <div class="project postgis">
+                <h3>Proyecto PostGIS 1</h3>
+                <p>Descripción breve.</p>
+                <a href="#">Ver en GitHub</a>
+            </div>
+            <div class="project postgis">
+                <h3>Proyecto PostGIS 2</h3>
+                <p>Otro proyecto PostGIS.</p>
+                <a href="#">Ver en GitHub</a>
+            </div>
+
+            <!-- Proyectos de GDAL -->
+            <div class="project GDAL">
+                <h3>Proyecto GDAL 1</h3>
+                <p>Descripción breve.</p>
+                <a href="#">Ver en GitHub</a>
+            </div>
+            <div class="project GDAL">
+                <h3>Proyecto GDAL 2</h3>
+                <p>Otro proyecto GDAL.</p>
+                <a href="#">Ver en GitHub</a>
+            </div>
+
+            <!-- Proyectos de Webmapping -->
+            <div class="project webmapping">
+                <h3>Proyecto WebMapping 1</h3>
+                <p>Descripción breve.</p>
+                <a href="#">Ver en GitHub</a>
+            </div>
+            <div class="project webmapping">
+                <h3>Proyecto WebMapping 2</h3>
+                <p>Otro proyecto WebMapping.</p>
+                <a href="#">Ver en GitHub</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Sección de contacto -->
+    <section id="contact" class="hidden-section">
+        <h1 class="title">Contacto</h1>
+        <!-- Contenedor del mapa -->
+        <div id="map"></div>
+
+        <!-- Contenedor del formulario -->
+        <form id="contactForm" action="https://formspree.io/f/mvgzvdpn" method="POST">
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
+            <input type="email" id="email" name="email" placeholder="e-mail" required>
+            <input type="text" id="asunto" name="asunto" placeholder="Asunto" required>
+            <textarea id="comentario" name="comentario" rows="4" placeholder="Escribe tu mensaje aquí..."></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+        <p id="respuesta"></p> 
+    </section>
+
+
+    <!-- Sección de pie de página -->
+    <footer class="footer">
+        <p>&copy; 2025 Charlie Lopez. Todos los derechos reservados.</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/chlopezgis/" target="_blank">
+                <img src="img/icons/linkedin.svg" alt="LinkedIn">
+            </a>
+            <a href="https://github.com/chlopezgis" target="_blank">
+                <img src="img/icons/github.svg" alt="GitHub">
+            </a>
+        </div>
+    </footer>
+</body>
+</html>

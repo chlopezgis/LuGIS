@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sofia&display=swap');
+
+.about-container {
+    display: flex; /* Utiliza Flexbox para alinear los divs en una fila */
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Espacia los elementos */
+    align-items: center;
+}
+
+.about-text, .about-foto {
+    width: 30%; /* Puedes ajustar el ancho de cada div según lo que necesites */
+    padding-top: 20px;
+}
+
+.about-foto img {
+    width: 250px; /* Define el tamaño de la imagen */
+    height: 250px; /* Define el tamaño de la imagen */
+    border-radius: 50%; /* Hace que la imagen sea un círculo */
+    margin-right: auto;
+    margin-left:0;
+    object-fit: cover; /* Ajusta la imagen dentro del contenedor */
+    align-items: center;
+}
+
+.about-text {
+    width: auto;  /* Define el tamaño fijo del contenedor */
+    margin: auto;
+    text-align: left;  /* Alinea el texto a la izquierda */
+    flex: 1; /* Hace que el texto ocupe el espacio restante */
+}
+
+.about-text-1 {
+    font-family: Arial, sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #09443aec;
+    margin: 0px 10px;
+    padding-right: 100px;
+    text-align: justify;
+}
+
+#about .title {
+    font-size: 35px;
+    text-align: center;
+    padding-top: 10px;
+    font-family: Roboto;
+}
+
+/* 📱 Responsive: Menú hamburguesa en pantallas pequeñas */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* Cambia a diseño vertical */
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-foto {
+        display: flex;
+        justify-content: center;
+        width: 100%; /* Asegura que el contenedor ocupe toda la pantalla */
+        padding-top: 50px;
+    }
+
+    .about-foto img {
+        width: 180px; /* Reduce el tamaño de la imagen */
+        height: 180px;
+        margin: auto; /* Centra la imagen */
+    }
+
+    #about .title {
+        font-size: 25px;
+    }
+
+    .about-text {
+        width: 90%; /* Asegura que el texto no se encime */
+        text-align: center;
+        padding: 0px;
+        margin: auto;
+    }
+
+    .about-text-1 {
+        padding: 20px 5%;
+        font-size: 14px;
+        text-align: center;
+    }
+}

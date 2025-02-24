@@ -1,0 +1,68 @@
+#projects p{
+    color: rgb(27, 49, 43);
+}
+
+/* Botones de pestañas */
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    padding: 15px 30px;
+    margin: 5px;
+    border: none;
+    background: #0e7a68;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out; /* Transición suave */
+}
+
+.tab-button.active {
+    background: #03413b;
+}
+
+/* Contenedor de proyectos */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: min(100%, 1000px);
+    margin: auto;
+}
+
+
+/* Estilo de cada tarjeta */
+.project {
+    background: #e1f3efea;
+    padding: 10px;
+    border-radius: 10px;
+    border: solid 1px rgb(207, 229, 229);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.349);
+    text-align: center;
+    display: none;  /* Oculto por defecto */
+}
+
+/* Mostrar proyectos activos */
+.project.show {
+    display: block;
+}
+
+/* 📱 Responsive: Menú hamburguesa en pantallas pequeñas */
+@media (max-width: 768px) {
+    .tab-button {
+        padding: 15px 12px;
+        margin: 3px;
+        font-size: 12px;
+    }
+
+    .project {
+        margin: 0px;
+        flex-direction: column;
+    }
+}
